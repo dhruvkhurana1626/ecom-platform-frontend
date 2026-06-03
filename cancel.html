@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment Failed | ShopSphere</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#1f2937,#111827,#0f172a);
+    overflow:hidden;
+    padding:20px;
+    position:relative;
+}
+
+/* Background glow */
+body::before,
+body::after{
+    content:"";
+    position:absolute;
+    border-radius:50%;
+    filter:blur(90px);
+    z-index:0;
+}
+
+body::before{
+    width:300px;
+    height:300px;
+    background:#ef4444;
+    top:-80px;
+    left:-60px;
+    opacity:.22;
+}
+
+body::after{
+    width:320px;
+    height:320px;
+    background:#f97316;
+    bottom:-90px;
+    right:-70px;
+    opacity:.18;
+}
+
+.card{
+    position:relative;
+    z-index:2;
+    width:100%;
+    max-width:520px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.12);
+    border-radius:28px;
+    padding:45px 35px;
+    text-align:center;
+    color:white;
+    box-shadow:0 20px 45px rgba(0,0,0,.35);
+    animation:fade .6s ease;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.logo{
+    font-size:32px;
+    font-weight:700;
+    margin-bottom:28px;
+}
+
+.logo span{
+    color:#ef4444;
+}
+
+.icon-wrap{
+    display:flex;
+    justify-content:center;
+    margin-bottom:24px;
+}
+
+.cross{
+    width:95px;
+    height:95px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#ef4444,#dc2626);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 10px 30px rgba(239,68,68,.35);
+    animation:shake .45s ease;
+}
+
+@keyframes shake{
+    0%{transform:rotate(-6deg);}
+    50%{transform:rotate(6deg);}
+    100%{transform:rotate(0);}
+}
+
+.cross svg{
+    width:40px;
+    fill:white;
+}
+
+h1{
+    font-size:32px;
+    margin-bottom:12px;
+}
+
+p{
+    color:#d1d5db;
+    line-height:1.7;
+    margin-bottom:30px;
+    font-size:15px;
+}
+
+.btn-group{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    text-decoration:none;
+    padding:14px 26px;
+    border-radius:14px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.retry{
+    background:linear-gradient(135deg,#ef4444,#dc2626);
+    color:white;
+    box-shadow:0 10px 25px rgba(239,68,68,.28);
+}
+
+.retry:hover{
+    transform:translateY(-2px);
+}
+
+.home{
+    border:1px solid rgba(255,255,255,.2);
+    color:white;
+    background:rgba(255,255,255,.06);
+}
+
+.home:hover{
+    background:rgba(255,255,255,.1);
+}
+
+.footer{
+    margin-top:28px;
+    font-size:13px;
+    color:#9ca3af;
+}
+
+@media(max-width:480px){
+
+    .card{
+        padding:35px 24px;
+        border-radius:22px;
+    }
+
+    h1{
+        font-size:26px;
+    }
+
+    .logo{
+        font-size:26px;
+    }
+
+    .cross{
+        width:80px;
+        height:80px;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+
+    <div class="logo">
+        Shop<span>Sphere</span>
+    </div>
+
+    <div class="icon-wrap">
+        <div class="cross">
+            <svg viewBox="0 0 24 24">
+                <path d="M18.3 5.71L12 12l6.3 6.29-1.41 1.41L10.59 13.41 4.29 19.7 2.88 18.29 9.17 12 2.88 5.71 4.29 4.3l6.3 6.29 6.29-6.29z"/>
+            </svg>
+        </div>
+    </div>
+
+    <h1>Payment Failed ❌</h1>
+
+    <p>
+        Your transaction could not be completed or was cancelled.<br>
+        No worries — you can retry the payment or continue shopping.
+    </p>
+
+    <!-- <div class="btn-group">
+        <a href="/checkout" class="btn retry">
+            Retry Payment
+        </a>
+
+        <a href="/" class="btn home">
+            Back to Home
+        </a>
+    </div> -->
+
+    <div class="footer">
+        Made by Dhruv Khurana
+    </div>
+
+</div>
+
+</body>
+</html>

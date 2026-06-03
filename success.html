@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment Successful | ShopSphere</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family:'Poppins',sans-serif;
+    }
+
+    body{
+        min-height:100vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        background:linear-gradient(135deg,#0f172a,#1e293b,#111827);
+        overflow:hidden;
+        padding:20px;
+    }
+
+    /* Background circles */
+    body::before,
+    body::after{
+        content:"";
+        position:absolute;
+        border-radius:50%;
+        filter:blur(80px);
+        z-index:0;
+    }
+
+    body::before{
+        width:300px;
+        height:300px;
+        background:#22c55e;
+        top:-80px;
+        left:-80px;
+        opacity:.25;
+    }
+
+    body::after{
+        width:350px;
+        height:350px;
+        background:#3b82f6;
+        bottom:-100px;
+        right:-100px;
+        opacity:.25;
+    }
+
+    .card{
+        position:relative;
+        z-index:2;
+        background:rgba(255,255,255,0.08);
+        backdrop-filter:blur(14px);
+        border:1px solid rgba(255,255,255,0.15);
+        width:100%;
+        max-width:520px;
+        border-radius:28px;
+        padding:45px 35px;
+        text-align:center;
+        color:white;
+        box-shadow:0 20px 50px rgba(0,0,0,.35);
+        animation:fadeIn .7s ease;
+    }
+
+    @keyframes fadeIn{
+        from{
+            opacity:0;
+            transform:translateY(25px);
+        }
+        to{
+            opacity:1;
+            transform:translateY(0);
+        }
+    }
+
+    .logo{
+        font-size:32px;
+        font-weight:700;
+        margin-bottom:28px;
+        letter-spacing:.5px;
+    }
+
+    .logo span{
+        color:#22c55e;
+    }
+
+    .check-wrap{
+        display:flex;
+        justify-content:center;
+        margin-bottom:25px;
+    }
+
+    .check{
+        width:95px;
+        height:95px;
+        border-radius:50%;
+        background:linear-gradient(135deg,#22c55e,#16a34a);
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        box-shadow:0 10px 30px rgba(34,197,94,.4);
+        animation:pop .5s ease;
+    }
+
+    @keyframes pop{
+        from{
+            transform:scale(.6);
+            opacity:0;
+        }
+        to{
+            transform:scale(1);
+            opacity:1;
+        }
+    }
+
+    .check svg{
+        width:45px;
+        fill:white;
+    }
+
+    h1{
+        font-size:32px;
+        margin-bottom:12px;
+        font-weight:700;
+    }
+
+    p{
+        color:#d1d5db;
+        line-height:1.7;
+        margin-bottom:28px;
+        font-size:15px;
+    }
+
+    .btn{
+        display:inline-block;
+        text-decoration:none;
+        padding:14px 28px;
+        border-radius:14px;
+        background:linear-gradient(135deg,#22c55e,#16a34a);
+        color:white;
+        font-weight:600;
+        transition:.3s;
+        box-shadow:0 10px 25px rgba(34,197,94,.25);
+    }
+
+    .btn:hover{
+        transform:translateY(-2px);
+        box-shadow:0 14px 30px rgba(34,197,94,.35);
+    }
+
+    .footer{
+        margin-top:30px;
+        font-size:13px;
+        color:#9ca3af;
+    }
+
+    @media(max-width:480px){
+        .card{
+            padding:35px 24px;
+            border-radius:22px;
+        }
+
+        h1{
+            font-size:26px;
+        }
+
+        .logo{
+            font-size:26px;
+        }
+
+        .check{
+            width:80px;
+            height:80px;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="card">
+
+    <div class="logo">
+        Shop<span>Sphere</span>
+    </div>
+
+    <div class="check-wrap">
+        <div class="check">
+            <svg viewBox="0 0 52 52">
+                <path d="M20.285 36.709L10.8 27.225l-3.534 3.535 13.019 13.019L45.734 18.33l-3.535-3.535z"/>
+            </svg>
+        </div>
+    </div>
+
+    <h1>Payment Successful 🎉</h1>
+
+    <p>
+        Thank you for shopping with ShopSphere.<br>
+        Your payment has been processed successfully and your order is now being prepared.
+    </p>
+
+    <!-- <a href="/" class="btn">
+        Continue Shopping
+    </a> -->
+
+    <div class="footer">
+        Made by Dhruv Khurana
+    </div>
+
+</div>
+
+</body>
+</html>
